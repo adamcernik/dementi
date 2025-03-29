@@ -104,6 +104,16 @@ main, section {
     letter-spacing: 1px;
 }
 
+.logo h1 a {
+    color: var(--charcoal);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo h1 a:hover {
+    color: var(--racing-pink);
+}
+
 .main-nav {
     display: flex;
     align-items: center;
@@ -142,6 +152,44 @@ main, section {
     color: var(--charcoal);
     font-size: 1.5rem;
     cursor: pointer;
+}
+
+/* Hero Sections */
+.riders-hero {
+    background-color: var(--blossom);
+    color: var(--charcoal);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.riders-hero h1 {
+    color: var(--charcoal);
+    margin-bottom: 1rem;
+}
+
+.riders-hero p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: var(--charcoal);
+}
+
+.epics-hero {
+    background-color: var(--racing-pink);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.epics-hero h1 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.epics-hero p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
 }
 
 /* Intro Section */
@@ -281,6 +329,11 @@ cite {
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.2s ease;
+}
+
+a.btn {
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn.primary {
@@ -575,6 +628,10 @@ cite {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
+.epic-card a.btn {
+    text-decoration: none;
+}
+
 .epic-image {
     flex: 0 0 40%;
     overflow: hidden;
@@ -634,6 +691,17 @@ cite {
     }
     
     .epic-image {
-        height: 200px;
+        height: 0;
+        padding-bottom: 39.375%; /* 56.25% reduced by 30% */
+        position: relative;
+    }
+    
+    .epic-image img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 } 

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & About - Dementi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="js/includes.js"></script>
+    <style>
+        .contact-hero {
+            background-color: var(--racing-pink);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .contact-hero h1 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-hero p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+        }
+        
+        .about-section, .contact-section {
+            padding: 4rem 0;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+        
+        .about-content h2 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .story-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 1rem;
+            height: 100%;
+        }
+        
+        .story-image {
+            border-radius: 8px;
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        .story-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-form {
+            background-color: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--deep-forest);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 1rem;
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--mint-breeze);
+            box-shadow: 0 0 0 2px rgba(76, 214, 177, 0.2);
+        }
+        
+        .contact-info {
+            background-color: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-info h3 {
+            margin-bottom: 1.5rem;
+            color: var(--deep-forest);
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--seafoam);
+            color: var(--deep-forest);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-details h4 {
+            margin-bottom: 0.3rem;
+            color: var(--deep-forest);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background-color: var(--cloud);
+            color: var(--deep-forest);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        
+        .social-link:hover {
+            background-color: var(--racing-pink);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .about-grid, .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header will be inserted here -->
+    <div id="header-placeholder"></div>
+    
+    <main>
+        <section class="contact-hero">
+            <div class="container">
+                <h1>Get in Touch</h1>
+                <p>Have questions about our cycling adventures? Want to join an upcoming epic? Or just want to say hello? We'd love to hear from you.</p>
+            </div>
+        </section>
+        
+        <section class="about-section">
+            <div class="container">
+                <h2>About Dementi</h2>
+                <div class="about-grid">
+                    <div class="about-content">
+                        <p>Dementi is a group of friends from Prague who share a passion for cycling adventures, particularly in the mountains. What started as casual weekend rides around our city has evolved into epic multi-day journeys across Europe's most challenging terrain.</p>
+                        
+                        <p>Our name "Dementi" (which means "denial" in Czech) came from our habit of denying how difficult our planned routes actually were. "It's not that steep," we'd say. "The weather won't be that bad," we'd insist. These statements would inevitably be followed by a formal "dementi" (denial) when we found ourselves grinding up impossibly steep gradients in pouring rain.</p>
+                        
+                        <p>Despite the challenges—or perhaps because of them—we keep coming back for more. Each adventure strengthens our friendship and leaves us with stories we'll be telling for years to come.</p>
+                        
+                        <p>Through this website, we share our journeys, our knowledge, and our love for cycling. Whether you're an experienced cyclist or just starting out, we hope our stories inspire you to push your own boundaries and create adventures of your own.</p>
+                    </div>
+                    <div class="story-images">
+                        <div class="story-image">
+                            <img src="images/epics/01-stelvio/IMG_6142 Large.jpeg" alt="Dementi Team">
+                        </div>
+                        <div class="story-image">
+                            <img src="images/epics/01-stelvio/IMG_6127 Large.jpeg" alt="Mountain Climb">
+                        </div>
+                        <div class="story-image">
+                            <img src="images/epics/01-stelvio/IMG_6153 Large.jpeg" alt="Alpine Views">
+                        </div>
+                        <div class="story-image">
+                            <img src="images/epics/01-stelvio/IMG_6247 Large.jpeg" alt="Scenic Route">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="contact-section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="contact-grid">
+                    <div class="contact-form">
+                        <form action="#" method="post" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" class="form-control" required></textarea>
+                            </div>
+                            <button type="submit" class="btn primary">Send Message</button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <h3>Other Ways to Connect</h3>
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>dementi.cycling@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Based In</h4>
+                                <p>Prague, Czech Republic</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fab fa-strava"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Join Our Strava Club</h4>
+                                <p>Follow our training and adventures</p>
+                            </div>
+                        </div>
+                        
+                        <h3>Follow Us</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-strava"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer will be inserted here -->
+    <div id="footer-placeholder"></div>
+    
+    <script>
+        // Form submission handling could go here
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thanks for your message! This is a demo form - in a real implementation, your message would be sent.');
+            this.reset();
+        });
+    </script>
+</body>
+</html> 

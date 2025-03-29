@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Plans - Dementi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="js/includes.js"></script>
+    <style>
+        .plans-hero {
+            background-color: var(--deep-forest);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .plans-hero h1 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .plans-hero p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+        }
+        
+        .plans-section {
+            padding: 4rem 0;
+        }
+        
+        .plan-card {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 3rem;
+        }
+        
+        .plan-header {
+            padding: 2rem;
+            background-color: var(--mint-breeze);
+            color: var(--deep-forest);
+            position: relative;
+        }
+        
+        .plan-header h2 {
+            margin-bottom: 0.5rem;
+            color: var(--deep-forest);
+        }
+        
+        .plan-status {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+        
+        .status-planning {
+            background-color: var(--blossom);
+            color: var(--deep-forest);
+        }
+        
+        .status-confirmed {
+            background-color: var(--deep-forest);
+            color: white;
+        }
+        
+        .status-dream {
+            background-color: var(--cloud);
+            color: var(--charcoal);
+        }
+        
+        .plan-content {
+            padding: 2rem;
+        }
+        
+        .plan-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .plan-detail {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .detail-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--racing-pink);
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+        }
+        
+        .detail-value {
+            font-size: 1.1rem;
+            color: var(--charcoal);
+        }
+        
+        .plan-actions {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .plan-actions {
+                flex-direction: column;
+            }
+            
+            .plan-actions .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header will be inserted here -->
+    <div id="header-placeholder"></div>
+    
+    <main>
+        <section class="plans-hero">
+            <div class="container">
+                <h1>Our Future Adventures</h1>
+                <p>Discover where the Dementi crew is planning to ride next. From confirmed expeditions to dream routes, here's what's on our cycling horizon.</p>
+            </div>
+        </section>
+        
+        <section class="plans-section">
+            <div class="container">
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <span class="plan-status status-confirmed">Confirmed</span>
+                        <h2>Transalp Challenge 2024</h2>
+                        <p>A classic route across the Alps from Germany to Italy</p>
+                    </div>
+                    <div class="plan-content">
+                        <div class="plan-details">
+                            <div class="plan-detail">
+                                <div class="detail-label">Dates</div>
+                                <div class="detail-value">July 15-22, 2024</div>
+                            </div>
+                            <div class="plan-detail">
+                                <div class="detail-label">Distance</div>
+                                <div class="detail-value">~850 km</div>
+                            </div>
+                            <div class="plan-detail">
+                                <div class="detail-label">Elevation</div>
+                                <div class="detail-value">~19,000 m</div>
+                            </div>
+                            <div class="plan-detail">
+                                <div class="detail-label">Difficulty</div>
+                                <div class="detail-value">Hard</div>
+                            </div>
+                        </div>
+                        
+                        <p>Our next confirmed adventure will take us from Garmisch-Partenkirchen in Germany to Riva del Garda in Italy. This classic Transalp route will include iconic climbs such as the Timmelsjoch, Stelvio, and Gavia passes. We'll journey through three countries, experiencing the best of the Alpine landscapes and culture.</p>
+                        
+                        <div class="plan-actions">
+                            <a href="#" class="btn primary">View Route Details</a>
+                            <a href="#" class="btn secondary">Express Interest</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <span class="plan-status status-planning">Planning</span>
+                        <h2>Pyrenees Coast to Coast</h2>
+                        <p>From the Atlantic to the Mediterranean across the mighty Pyrenees</p>
+                    </div>
+                    <div class="plan-content">
+                        <div class="plan-details">
+                            <div class="plan-detail">
+                                <div class="detail-label">Dates</div>
+                                <div class="detail-value">September 2024 (TBC)</div>
+                            </div>
+                            <div class="plan-detail">
+                                <div class="detail-label">Distance</div>
+                                <div class="detail-value">~750 km</div>
+                            </div>
+                            <div class="plan-detail">
+                                <div class="detail-label">Elevation</div>
+                                <div class="detail-value">~15,000 m</div>
+                            </div>
+                            <div class="plan-detail">
+                                <div class="detail-label">Difficulty</div>
+                                <div class="detail-value">Hard</div>
+                            </div>
+                        </div>
+                        
+                        <p>This incredible journey will take us from Biarritz on the Atlantic coast to Collioure on the Mediterranean, crossing the entire Pyrenees mountain range. We'll tackle legendary climbs like the Tourmalet and Aubisque, passing through both France and Spain along the way.</p>
+                        
+                        <div class="plan-actions">
+                            <a href="#" class="btn primary">View Draft Route</a>
+                            <a href="#" class="btn secondary">Express Interest</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <span class="plan-status status-dream">Dream Ride</span>
+                        <h2>Dolomites Grand Tour</h2>
+                        <p>An epic loop through the most beautiful mountains in Europe</p>
+                    </div>
+                    <div class="plan-content">
+                        <div class="plan-details">
+                            <div class="plan-detail">
+                                <div class="detail-label">Dates</div>
+                                <div class="detail-value">Summer 2025 (Conceptual)</div>
+                            </div>
+                            <div class="plan-detail">
+                                <div class="detail-label">Distance</div>
+                                <div class="detail-value">~600 km</div>
+                            </div>
+                            <div class="plan-detail">
+                                <div class="detail-label">Elevation</div>
+                                <div class="detail-value">~16,000 m</div>
+                            </div>
+                            <div class="plan-detail">
+                                <div class="detail-label">Difficulty</div>
+                                <div class="detail-value">Very Hard</div>
+                            </div>
+                        </div>
+                        
+                        <p>This dream ride would take us through the stunning Dolomites in northern Italy, widely considered some of the most beautiful mountains in the world. We'd tackle iconic passes like the Sella Ronda, Passo Giau, and Tre Cime di Lavaredo, experiencing the unique blend of Italian and Austrian cultures in this UNESCO World Heritage region.</p>
+                        
+                        <div class="plan-actions">
+                            <a href="#" class="btn primary">Suggest Ideas</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer will be inserted here -->
+    <div id="footer-placeholder"></div>
+</body>
+</html> 
