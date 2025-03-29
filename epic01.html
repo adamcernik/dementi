@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Great Great Stelvio - Dementi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="js/includes.js"></script>
+    <style>
+        .epic-hero {
+            height: 60vh;
+            min-height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .epic-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        
+        .epic-hero-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+        }
+        
+        .epic-hero-content h1 {
+            color: white;
+            margin-bottom: 0.5rem;
+            font-size: 2.5rem;
+        }
+        
+        .epic-hero-meta {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        
+        .epic-details-section {
+            padding: 4rem 0;
+        }
+        
+        .epic-details-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+        
+        .epic-info-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+        
+        .epic-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 1.5rem;
+            background-color: var(--cloud);
+            border-radius: 8px;
+        }
+        
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--deep-forest);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .epic-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 200px);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .gallery-item:first-child {
+            grid-column: 1 / 3;
+            grid-row: 1 / 3;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+        
+        @media (max-width: 900px) {
+            .epic-details-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .epic-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .epic-gallery {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
+            }
+            
+            .gallery-item:first-child {
+                grid-column: 1 / 3;
+                grid-row: 1 / 2;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .epic-gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-item:first-child {
+                grid-column: 1;
+                grid-row: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header will be inserted here -->
+    <div id="header-placeholder"></div>
+    
+    <main>
+        <div class="epic-hero">
+            <img src="images/epics/01-stelvio/IMG_6142.jpeg" alt="The Great Great Stelvio">
+            <div class="epic-hero-content">
+                <h1>The Great Great Stelvio</h1>
+                <div class="epic-hero-meta">
+                    <span><i class="far fa-calendar"></i> June 26-July 3, 2024</span>
+                    <span><i class="fas fa-route"></i> 980km</span>
+                    <span><i class="fas fa-mountain"></i> 18,500m elevation</span>
+                </div>
+            </div>
+        </div>
+        
+        <section class="epic-details-section">
+            <div class="container">
+                <div class="epic-details-grid">
+                    <div class="epic-main-content">
+                        <div class="epic-info-card">
+                            <h2>The Epic Journey</h2>
+                            <p>Experience the ultimate Alpine cycling challenge as we tackle the legendary Stelvio Pass and surrounding mountain regions. This extraordinary cycling adventure takes you through breathtaking landscapes, picturesque villages, and some of the most iconic mountain passes in cycling history.</p>
+                            
+                            <p>The Great Great Stelvio Epic is designed for experienced cyclists looking to test their limits while enjoying the magnificent beauty of the Alps. Our carefully planned route balances challenging climbs with rewarding descents and unforgettable vistas.</p>
+                            
+                            <h3>Highlights:</h3>
+                            <ul>
+                                <li>Conquer the iconic Stelvio Pass - one of cycling's most legendary climbs</li>
+                                <li>Experience the breathtaking beauty of the Italian and Swiss Alps</li>
+                                <li>Visit charming Alpine villages and enjoy local cuisine</li>
+                                <li>Challenge yourself on multiple classic mountain passes</li>
+                                <li>Share the journey with like-minded cycling enthusiasts</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="epic-info-card">
+                            <h2>What to Expect</h2>
+                            <p>The Great Great Stelvio Epic is a challenging adventure that requires good fitness and cycling experience. Participants should be comfortable with long days in the saddle and multiple days of consecutive riding.</p>
+                            
+                            <div class="epic-stats">
+                                <div class="stat-item">
+                                    <div class="stat-value">980km</div>
+                                    <div class="stat-label">Total Distance</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">18,500m</div>
+                                    <div class="stat-label">Total Elevation</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">8 Days</div>
+                                    <div class="stat-label">Duration</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="epic-gallery">
+                            <div class="gallery-item">
+                                <img src="images/epics/01-stelvio/IMG_6086 Large.jpeg" alt="Stelvio Pass View">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/epics/01-stelvio/IMG_6153 Large.jpeg" alt="Alpine Mountain Road">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/epics/01-stelvio/IMG_6127 Large.jpeg" alt="Cycling in the Mountains">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/epics/01-stelvio/IMG_6247 Large.jpeg" alt="Scenic Alpine Views">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/epics/01-stelvio/IMG_6091 Large.jpeg" alt="Mountain Descent">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/epics/01-stelvio/IMG_6179 Large.jpeg" alt="Alpine Village">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="epic-sidebar">
+                        <div class="epic-info-card">
+                            <h3>Event Details</h3>
+                            <ul class="event-details-list">
+                                <li><strong>Dates:</strong> June 26-July 3, 2024</li>
+                                <li><strong>Start:</strong> Bormio, Italy</li>
+                                <li><strong>Finish:</strong> Bormio, Italy</li>
+                                <li><strong>Group Size:</strong> 8-12 riders</li>
+                                <li><strong>Difficulty:</strong> Challenging</li>
+                                <li><strong>Support:</strong> Fully supported with SAG vehicle</li>
+                            </ul>
+                            
+                            <a href="#" class="btn primary" style="width: 100%; margin-top: 1.5rem;">Register Now</a>
+                        </div>
+                        
+                        <div class="epic-info-card">
+                            <h3>Daily Itinerary</h3>
+                            <ul class="itinerary-list">
+                                <li><strong>Day 1:</strong> Arrival in Bormio</li>
+                                <li><strong>Day 2:</strong> Bormio to Livigno (120km)</li>
+                                <li><strong>Day 3:</strong> Livigno to St. Moritz (115km)</li>
+                                <li><strong>Day 4:</strong> St. Moritz to Merano (140km)</li>
+                                <li><strong>Day 5:</strong> Merano to Lake Garda (150km)</li>
+                                <li><strong>Day 6:</strong> Lake Garda to Madonna di Campiglio (125km)</li>
+                                <li><strong>Day 7:</strong> Madonna di Campiglio to Bormio (130km)</li>
+                                <li><strong>Day 8:</strong> Stelvio Pass Loop (100km)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer will be inserted here -->
+    <div id="footer-placeholder"></div>
+</body>
+</html> 
