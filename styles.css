@@ -1,0 +1,455 @@
+:root {
+    /* Primary Colors */
+    --racing-pink: #FF4D8B;
+    --mint-breeze: #4CD6B1;
+    --deep-forest: #1A6E50;
+    
+    /* Secondary Colors */
+    --blossom: #FFACC7;
+    --seafoam: #C2F0E2;
+    --charcoal: #333333;
+    --cloud: #F7F7F7;
+}
+
+/* Base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cloud);
+    color: var(--charcoal);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2rem; /* 32px */
+    line-height: 1.2;
+    font-weight: 700;
+    color: var(--racing-pink);
+}
+
+h2 {
+    font-size: 1.5rem; /* 24px */
+    line-height: 1.3;
+    font-weight: 600;
+    color: var(--deep-forest);
+}
+
+h3 {
+    font-size: 1.25rem; /* 20px */
+    line-height: 1.4;
+    font-weight: 600;
+    color: var(--charcoal);
+}
+
+p {
+    margin-bottom: 1.5rem; /* 1.5x font size for paragraph spacing */
+    max-width: 700px; /* Optimal reading width */
+}
+
+.emphasis {
+    font-weight: 600;
+}
+
+/* Layout */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+main, section {
+    padding: 2rem;
+}
+
+/* Header and Navigation */
+.main-header {
+    background-color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: none;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: var(--charcoal);
+    margin: 0;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    color: var(--charcoal);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--racing-pink);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--charcoal);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Intro Section */
+.intro {
+    background-color: var(--racing-pink);
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.tagline {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 auto 1rem;
+}
+
+.announcement {
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+/* Color Showcase */
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.color-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.color-swatch {
+    height: 120px;
+}
+
+.primary-1 .color-swatch { background-color: var(--racing-pink); }
+.primary-2 .color-swatch { background-color: var(--mint-breeze); }
+.primary-3 .color-swatch { background-color: var(--deep-forest); }
+.secondary-1 .color-swatch { background-color: var(--blossom); }
+.secondary-2 .color-swatch { background-color: var(--seafoam); }
+
+.color-name, .color-hex {
+    padding: 0.5rem 1rem;
+    margin: 0;
+}
+
+.color-name {
+    font-weight: 600;
+}
+
+.color-hex {
+    color: #666;
+    font-family: monospace;
+}
+
+/* Typography Showcase */
+.text-examples {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.text-sample {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.text-sample:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.specs {
+    font-size: 0.875rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.example {
+    margin-bottom: 0.5rem;
+}
+
+/* Quote Section */
+.quote-section {
+    background-color: var(--seafoam);
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+blockquote {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1.375rem; /* 22px */
+    line-height: 1.4;
+    max-width: 800px;
+    margin: 0 auto 1rem;
+    color: var(--deep-forest);
+}
+
+cite {
+    font-style: normal;
+    font-weight: 600;
+    color: var(--charcoal);
+}
+
+/* Buttons */
+.button-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn.primary {
+    background-color: var(--racing-pink);
+    color: white;
+}
+
+.btn.secondary {
+    background-color: var(--mint-breeze);
+    color: var(--deep-forest);
+}
+
+.btn.accent {
+    background-color: var(--deep-forest);
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn.primary:hover {
+    background-color: var(--blossom);
+}
+
+.btn.secondary:hover {
+    background-color: var(--seafoam);
+}
+
+.btn.accent:hover {
+    background-color: #145D40;
+}
+
+/* Riders Section */
+.riders {
+    padding: 4rem 0;
+    background-color: var(--cloud);
+}
+
+.riders h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.rider-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.rider-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rider-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.rider-img {
+    height: 280px;
+    overflow: hidden;
+}
+
+.rider-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.rider-card:hover .rider-img img {
+    transform: scale(1.05);
+}
+
+.rider-info {
+    padding: 1.5rem;
+}
+
+.rider-info h3 {
+    margin-bottom: 0.5rem;
+    color: var(--charcoal);
+}
+
+.rider-specialty {
+    color: var(--racing-pink);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.rider-desc {
+    color: var(--charcoal);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Reduce font size on mobile */
+    }
+    
+    h1 {
+        font-size: 1.75rem; /* Reduced from 2rem */
+    }
+    
+    h2 {
+        font-size: 1.35rem; /* Reduced from 1.5rem */
+    }
+    
+    h3 {
+        font-size: 1.15rem; /* Reduced from 1.25rem */
+    }
+    
+    blockquote {
+        font-size: 1.2rem; /* Reduced from 1.375rem */
+    }
+    
+    main, section {
+        padding: 1.5rem 1rem;
+    }
+
+    /* Mobile Navigation */
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: white;
+        padding: 1rem 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        visibility: hidden;
+    }
+
+    .nav-links.active {
+        max-height: 300px;
+        visibility: visible;
+    }
+
+    .nav-links li {
+        margin: 0;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
+    }
+    
+    .rider-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .rider-img {
+        height: 220px;
+    }
+} 
