@@ -97,6 +97,21 @@ main, section {
     align-items: center;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    height: 40px;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+.logo a:hover .logo-image {
+    filter: invert(49%) sepia(81%) saturate(2151%) hue-rotate(313deg) brightness(101%) contrast(101%);
+}
+
 .logo h1 {
     color: var(--charcoal);
     margin: 0;
@@ -509,6 +524,10 @@ a.btn {
     
     .rider-img {
         height: 220px;
+    }
+
+    .logo-image {
+        height: 32px;
     }
 } 
 
