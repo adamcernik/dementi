@@ -73,4 +73,36 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => {
             console.error('Error loading footer:', error);
         });
-}); 
+
+    // Fix footer navigation links based on current path
+    fixFooterLinks();
+});
+
+// Fix footer navigation links based on current path
+function fixFooterLinks() {
+    // Get the current path
+    const path = window.location.pathname;
+    const isRoot = path === '/' || path.endsWith('index.html');
+    const depth = path.split('/').filter(p => p && !p.includes('.')).length;
+    
+    // Wait for footer to be loaded
+    const footerInterval = setInterval(() => {
+        const footerLinks = document.querySelectorAll('.footer-nav a');
+        if (footerLinks.length) {
+            clearInterval(footerInterval);
+            
+            footerLinks.forEach(link => {
+                let href = link.getAttribute('href');
+                
+                // Remove any leading ../
+                href = href.replace(/^\.\.\//, '');
+                
+                // If we're not at root, add the right number of ../
+                if (!isRoot) {
+                    const prefix = depth === 0 ? '' : '../'.repeat(depth);
+                    link.setAttribute('href', prefix + href);
+                }
+            });
+        }
+    }, 100);
+} 
