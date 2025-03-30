@@ -46,6 +46,39 @@
             margin-bottom: 0.5rem;
             color: var(--deep-forest);
         }
+
+        /* Slovenia card specific styling */
+        .slovenia-header {
+            background-color: var(--deep-forest);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slovenia-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url(../images/epics/01-stelvio/IMG_6086\ Large.jpeg);
+            background-size: cover;
+            background-position: center;
+            opacity: 0.6;
+            z-index: 0;
+        }
+
+        .slovenia-header .plan-status {
+            position: relative;
+            z-index: 1;
+        }
+
+        .slovenia-header h2, .slovenia-header p {
+            position: relative;
+            z-index: 1;
+            color: white;
+        }
         
         .plan-status {
             display: inline-block;
@@ -136,7 +169,7 @@
         <section class="plans-section">
             <div class="container">
                 <div class="plan-card">
-                    <div class="plan-header">
+                    <div class="plan-header slovenia-header">
                         <span class="plan-status status-planning">Planning</span>
                         <h2>Slovenia 2025</h2>
                         <p>A 6-day journey through Alpine lakes, wine regions, and charming cities</p>
