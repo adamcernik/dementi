@@ -310,12 +310,18 @@
     height: 100%;
     object-fit: cover;
     opacity: 0.85;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.hero-rider-profile:hover img {
+    filter: grayscale(0%);
 }
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
     .epic-hero-content {
-        padding-bottom: 5rem; /* Create space for the rider profiles */
+        padding-bottom: 4rem; /* Reduced space for smaller rider profiles */
     }
     
     .epic-hero-riders {
@@ -326,10 +332,13 @@
         width: calc(100% - 4rem);
         justify-content: flex-start;
         flex-wrap: wrap;
-        gap: 8px;
+        gap: 6px;
     }
     
     .hero-rider-profile {
         margin-left: 0;
+        width: 25px;
+        height: 25px;
+        border-width: 0.5px;
     }
 } 
