@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     cssLink.href = cssPath;
     document.head.insertBefore(cssLink, script);
     
-    // Load head includes (skipping Google Analytics code)
+    // Load head includes
     fetch(basePath + 'head-includes.html')
         .then(response => response.text())
         .then(data => {
@@ -27,25 +27,16 @@ document.addEventListener('DOMContentLoaded', function() {
             const temp = document.createElement('div');
             temp.innerHTML = data;
             
-            // Skip Google Analytics code (first 8 lines)
-            // Starting from the 9th element (index 8), which should be after the Google Analytics scripts
-            const startIndex = 8;
-            
             // Find where to insert the elements (before the script tag that loads includes.js)
             const includesScript = script;
             
             // Get all child nodes from the temp container
             const nodes = temp.childNodes;
             
-            // Insert all nodes except Google Analytics code
-            let elementCount = 0;
+            // Insert all nodes from head-includes.html
             for (let i = 0; i < nodes.length; i++) {
-                if (nodes[i].nodeType === 1) { // Only count Element nodes
-                    if (elementCount >= startIndex) {
-                        // Insert elements after Google Analytics
-                        head.insertBefore(nodes[i].cloneNode(true), includesScript);
-                    }
-                    elementCount++;
+                if (nodes[i].nodeType === 1) { // Only insert Element nodes
+                    head.insertBefore(nodes[i].cloneNode(true), includesScript);
                 }
             }
         })
