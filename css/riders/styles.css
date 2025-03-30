@@ -1,0 +1,20 @@
+/* Riders section specific styles */
+
+/* Additional styles to make rider cards better on mobile */
+@media (max-width: 768px) {
+    .rider-grid {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+    
+    .rider-card {
+        width: 100%;
+        min-height: 100%;
+    }
+    
+    .rider-img {
+        height: 280px;
+    }
+} 
