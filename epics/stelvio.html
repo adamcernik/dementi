@@ -85,6 +85,39 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
+
+        .day-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1.5rem;
+        }
+        
+        .day-card h3 {
+            color: var(--deep-forest);
+            border-bottom: 1px solid var(--cloud);
+            padding-bottom: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        
+        .day-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .day-meta span {
+            display: flex;
+            align-items: center;
+        }
+        
+        .day-meta i {
+            margin-right: 0.5rem;
+            color: var(--racing-pink);
+        }
         
         .epic-gallery {
             display: grid;
@@ -175,8 +208,8 @@
                 <h1>The Great Great Stelvio</h1>
                 <div class="epic-hero-meta">
                     <span><i class="far fa-calendar"></i> June 26-July 3, 2023</span>
-                    <span><i class="fas fa-route"></i> 980km</span>
-                    <span><i class="fas fa-mountain"></i> 18,500m elevation</span>
+                    <span><i class="fas fa-route"></i> 888km</span>
+                    <span><i class="fas fa-mountain"></i> 6,803m elevation</span>
                 </div>
             </div>
         </div>
@@ -187,13 +220,11 @@
                     <div class="epic-main-content">
                         <div class="epic-info-card">
                             <h2>The Epic Journey</h2>
-                            <p>Our crew of eight Prague cyclists recently completed an unforgettable road bike journey through the heart of the Alps. Starting from the picturesque city of Innsbruck, we challenged ourselves on the legendary Stelvio Pass before descending into beautiful Brescia, Italy.</p>
+                            <p>Our Dementi crew completed an unforgettable 7-day road bike adventure through the heart of the Alps. Starting from the picturesque city of Innsbruck, we challenged ourselves on the legendary Stelvio Pass before continuing through the Italian landscapes of Lombardy, the Po Valley, and the Valpolicella wine region.</p>
                             
-                            <p>The route offered breathtaking mountain scenery, demanding climbs, and exhilarating descents. Our team spirit remained high throughout the journey as we pushed our limits and created lasting memories together.</p>
+                            <p>The route offered breathtaking mountain scenery, demanding climbs, and exhilarating descents as we crossed between Austria and Italy multiple times. Our journey took us through medieval towns, historic cities, and stunning natural landscapes, creating an incredible contrast of experiences from high Alpine roads to gentle valley routes.</p>
                             
-                            <p>This placeholder will soon be replaced with a full account of our adventures, complete with photos, route details, and personal stories from each rider. Stay tuned for the complete chronicle of how our Prague cycling squad conquered one of Europe's most iconic cycling routes!</p>
-                            
-                            <p><em>[Full website content coming soon]</em></p>
+                            <p>Covering 888 kilometers and conquering over 6,800 meters of elevation gain, this adventure tested our endurance and rewarded us with unforgettable memories, strengthening both our cycling abilities and our team bonds.</p>
                         </div>
                         
                         <div class="epic-info-card">
@@ -202,18 +233,111 @@
                             
                             <div class="epic-stats">
                                 <div class="stat-item">
-                                    <div class="stat-value">980km</div>
+                                    <div class="stat-value">888km</div>
                                     <div class="stat-label">Total Distance</div>
                                 </div>
                                 <div class="stat-item">
-                                    <div class="stat-value">18,500m</div>
+                                    <div class="stat-value">6,803m</div>
                                     <div class="stat-label">Total Elevation</div>
                                 </div>
                                 <div class="stat-item">
-                                    <div class="stat-value">8 Days</div>
+                                    <div class="stat-value">7 Days</div>
                                     <div class="stat-label">Duration</div>
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="day-card">
+                            <h3>Day 0 (June 26, Wednesday) - Arrival</h3>
+                            <div class="day-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Prague to Innsbruck</span>
+                                <span><i class="fas fa-bed"></i> LOOMZ Living (Self-check-in)</span>
+                            </div>
+                            <p>Our adventure began with the team gathering in Innsbruck, the picturesque capital of Austria's Tyrol region. We arrived by car from Prague, bringing our road bikes and gear for the upcoming challenge. The evening was spent checking equipment, discussing the route ahead, and enjoying the views of the surrounding Alps that would set the stage for our journey.</p>
+                        </div>
+
+                        <div class="day-card">
+                            <h3>Day 1 (June 27, Thursday) - Warm Up</h3>
+                            <div class="day-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Innsbruck to Glorenza</span>
+                                <span><i class="fas fa-route"></i> 155.9 km</span>
+                                <span><i class="fas fa-arrow-up"></i> 1,333 m gain</span>
+                                <span><i class="fas fa-arrow-down"></i> 998 m loss</span>
+                                <span><i class="fas fa-bed"></i> Belvenu Boutique Hotel</span>
+                            </div>
+                            <p>Our first riding day took us from Innsbruck through the stunning Tyrolean landscapes. This warm-up route followed the Inn valley into Italy, introducing us to the Alpine terrain while allowing our legs to adjust to the coming challenges. We passed through Landeck before crossing into Italy's South Tyrol region, ending in the charming medieval walled town of Glorenza.</p>
+                        </div>
+
+                        <div class="day-card">
+                            <h3>Day 2 (June 28, Friday) - Stelvio Conquest</h3>
+                            <div class="day-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Glorenza to Tirano (via Stelvio Pass)</span>
+                                <span><i class="fas fa-route"></i> 85.5 km</span>
+                                <span><i class="fas fa-arrow-up"></i> 1,667 m gain</span>
+                                <span><i class="fas fa-arrow-down"></i> 2,142 m loss</span>
+                                <span><i class="fas fa-mountain"></i> 2,501 m (Stelvio Pass)</span>
+                                <span><i class="fas fa-bed"></i> Tirano - Bernina Suite 2</span>
+                            </div>
+                            <p>The highlight of our trip - tackling the legendary Stelvio Pass! This challenging day took us up one of cycling's most iconic climbs with its 48 numbered hairpin turns. From Glorenza, we climbed steadily through Prato allo Stelvio before the real challenge began. The 1,800m ascent rewarded us with breathtaking panoramic views at the summit before the thrilling descent to Bormio and onward to Tirano in Lombardy.</p>
+                        </div>
+
+                        <div class="day-card">
+                            <h3>Day 3 (June 29, Saturday) - Alpine Valleys</h3>
+                            <div class="day-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Tirano to Brescia</span>
+                                <span><i class="fas fa-route"></i> 134.3 km</span>
+                                <span><i class="fas fa-arrow-up"></i> 1,023 m gain</span>
+                                <span><i class="fas fa-arrow-down"></i> 1,321 m loss</span>
+                                <span><i class="fas fa-bed"></i> La Casa Di Daniele</span>
+                            </div>
+                            <p>After the previous day's mountain challenge, we continued our journey south through the Valtellina valley. The route took us through beautiful landscapes as we descended toward Lake Iseo, passing through Edolo and Darfo Boario Terme. The terrain gradually became less mountainous as we approached Brescia, a historic city with Roman roots and Renaissance architecture.</p>
+                        </div>
+
+                        <div class="day-card">
+                            <h3>Day 4 (June 30, Sunday) - Po Valley</h3>
+                            <div class="day-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Brescia to Piacenza</span>
+                                <span><i class="fas fa-route"></i> 82.7 km</span>
+                                <span><i class="fas fa-arrow-up"></i> 88 m gain</span>
+                                <span><i class="fas fa-arrow-down"></i> 166 m loss</span>
+                                <span><i class="fas fa-bed"></i> Hotel Astor</span>
+                            </div>
+                            <p>Our fourth day offered a welcome change of pace with a flatter route through the fertile Po Valley. This relatively short and level stage allowed for some recovery while still enjoying the Italian countryside. We rode through agricultural landscapes and small towns, passing near Cremona before arriving in Piacenza, a city known for its mix of Gothic and Renaissance architecture.</p>
+                        </div>
+
+                        <div class="day-card">
+                            <h3>Day 5 (July 1, Monday) - Tour de France Experience</h3>
+                            <div class="day-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Piacenza to Negrar di Valpolicella</span>
+                                <span><i class="fas fa-route"></i> 146.6 km</span>
+                                <span><i class="fas fa-arrow-up"></i> 684 m gain</span>
+                                <span><i class="fas fa-arrow-down"></i> 329 m loss</span>
+                                <span><i class="fas fa-bed"></i> La Camere Della Bice</span>
+                            </div>
+                            <p>Today's route took inspiration from Tour de France layouts with a mix of terrain. We headed east from Piacenza through the Po Valley before turning northward toward Verona. The landscape gradually transformed as we approached the Valpolicella wine region, ending in Negrar di Valpolicella, a charming town surrounded by vineyards in the pre-Alpine hills.</p>
+                        </div>
+
+                        <div class="day-card">
+                            <h3>Day 6 (July 2, Tuesday) - Wine Regions and Mountain Return</h3>
+                            <div class="day-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Negrar di Valpolicella to Bozen/Bolzano</span>
+                                <span><i class="fas fa-route"></i> 151.9 km</span>
+                                <span><i class="fas fa-arrow-up"></i> 437 m gain</span>
+                                <span><i class="fas fa-arrow-down"></i> 581 m loss</span>
+                                <span><i class="fas fa-bed"></i> Hotel Regina</span>
+                            </div>
+                            <p>Leaving the Valpolicella region, we headed north along the eastern shores of Lake Garda. The route took us through Arco and Riva del Garda before climbing toward Trento. We continued north through the beautiful Adige Valley with its vineyards and apple orchards, finishing in the bilingual city of Bozen/Bolzano, where Italian and Austrian cultures blend seamlessly.</p>
+                        </div>
+
+                        <div class="day-card">
+                            <h3>Day 7 (July 3, Wednesday) - Alpine Return</h3>
+                            <div class="day-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Bozen/Bolzano to Innsbruck</span>
+                                <span><i class="fas fa-route"></i> 126.7 km</span>
+                                <span><i class="fas fa-arrow-up"></i> 1,571 m gain</span>
+                                <span><i class="fas fa-arrow-down"></i> 1,251 m loss</span>
+                            </div>
+                            <p>Our final day completed the loop back to Innsbruck. From Bolzano, we headed north through the Eisack Valley past Brixen/Bressanone. Following the route instructions, we took the turn at Vahrn/Varna to begin the climb over the Brenner Pass, which marks the border between Italy and Austria. The final stretch took us down the Wipptal valley and back to our starting point in Innsbruck, completing an epic 7-day cycling adventure through some of Europe's most beautiful Alpine regions.</p>
                         </div>
                         
                         <div class="epic-gallery">
@@ -240,11 +364,24 @@
                     
                     <div class="epic-sidebar">
                         <div class="epic-info-card">
+                            <h3>Trip Highlights</h3>
+                            <ul>
+                                <li>Conquering the legendary Stelvio Pass (2,501m)</li>
+                                <li>Experiencing diverse terrain from high Alpine roads to gentle valley routes</li>
+                                <li>Visiting historic Italian cities including Brescia, Piacenza, and Verona</li>
+                                <li>Riding through the scenic Valpolicella wine region</li>
+                                <li>Crossing between Austrian and Italian cultures multiple times</li>
+                                <li>Completing a challenging 888 km loop through two countries</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="epic-info-card">
                             <h3>Trip Details</h3>
                             <ul class="event-details-list">
                                 <li><strong>Dates:</strong> June 26-July 3, 2023</li>
-                                <li><strong>Start:</strong> Innsbruck, Austria</li>
-                                <li><strong>Finish:</strong> Brescia, Italy</li>
+                                <li><strong>Start/End:</strong> Innsbruck, Austria</li>
+                                <li><strong>Distance:</strong> 888 km</li>
+                                <li><strong>Elevation:</strong> 6,803 m</li>
                                 <li><strong>Group Size:</strong> 8 riders</li>
                                 <li><strong>Difficulty:</strong> Challenging</li>
                                 <li><strong>Support:</strong> Self-supported with luggage transfer</li>
@@ -252,16 +389,15 @@
                         </div>
                         
                         <div class="epic-info-card">
-                            <h3>Route Highlights</h3>
+                            <h3>Accommodations</h3>
                             <ul class="itinerary-list">
-                                <li><strong>Day 1:</strong> Arrival in Innsbruck</li>
-                                <li><strong>Day 2:</strong> Innsbruck to Merano</li>
-                                <li><strong>Day 3:</strong> Merano to Bormio (via Stelvio)</li>
-                                <li><strong>Day 4:</strong> Bormio to St. Moritz</li>
-                                <li><strong>Day 5:</strong> St. Moritz to Chiavenna</li>
-                                <li><strong>Day 6:</strong> Chiavenna to Lake Como</li>
-                                <li><strong>Day 7:</strong> Lake Como to Brescia</li>
-                                <li><strong>Day 8:</strong> Departure</li>
+                                <li><strong>Day 0:</strong> LOOMZ Living (Innsbruck)</li>
+                                <li><strong>Day 1:</strong> Belvenu Boutique Hotel (Glorenza)</li>
+                                <li><strong>Day 2:</strong> Bernina Suite 2 (Tirano)</li>
+                                <li><strong>Day 3:</strong> La Casa Di Daniele (Brescia)</li>
+                                <li><strong>Day 4:</strong> Hotel Astor (Piacenza)</li>
+                                <li><strong>Day 5:</strong> La Camere Della Bice (Negrar di Valpolicella)</li>
+                                <li><strong>Day 6:</strong> Hotel Regina (Bozen/Bolzano)</li>
                             </ul>
                         </div>
                     </div>
