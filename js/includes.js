@@ -27,13 +27,13 @@ document.addEventListener('DOMContentLoaded', function() {
             const temp = document.createElement('div');
             temp.innerHTML = data;
             
+            // Get all child nodes from the fetched content
+            const nodes = temp.childNodes;
+            
             // Find where to insert the elements (before the script tag that loads includes.js)
             const includesScript = script;
             
-            // Get all child nodes from the temp container
-            const nodes = temp.childNodes;
-            
-            // Insert all nodes from head-includes.html
+            // Insert all nodes before the includes.js script
             for (let i = 0; i < nodes.length; i++) {
                 if (nodes[i].nodeType === 1) { // Only insert Element nodes
                     head.insertBefore(nodes[i].cloneNode(true), includesScript);
