@@ -7,41 +7,42 @@ document.addEventListener('DOMContentLoaded', function() {
     // Set the base path for includes
     const basePath = isSubdirectory ? '../includes/' : 'includes/';
     
-    // Load head includes (only if not already loaded manually)
-    if (!document.querySelector('head').innerHTML.includes('head-includes loaded')) {
-        fetch(basePath + 'head-includes.html')
-            .then(response => response.text())
-            .then(data => {
-                // Get the head element
-                const head = document.querySelector('head');
-                
-                // Create a temporary container
-                const temp = document.createElement('div');
-                temp.innerHTML = data;
-                
-                // Get all child nodes from the fetched content
-                const nodes = temp.childNodes;
-                
-                // Find where to insert the elements (before the script tag that loads includes.js)
-                const includesScript = script;
-                
-                // Insert all nodes before the includes.js script
-                for (let i = 0; i < nodes.length; i++) {
-                    if (nodes[i].nodeType === 1) { // Only insert Element nodes
-                        head.insertBefore(nodes[i].cloneNode(true), includesScript);
-                    }
+    // Set the CSS path based on the folder level
+    const cssPath = isSubdirectory ? '../styles.css' : 'styles.css';
+    
+    // Create and add CSS link
+    const cssLink = document.createElement('link');
+    cssLink.rel = 'stylesheet';
+    cssLink.href = cssPath;
+    document.head.insertBefore(cssLink, script);
+    
+    // Load head includes
+    fetch(basePath + 'head-includes.html')
+        .then(response => response.text())
+        .then(data => {
+            // Get the head element
+            const head = document.querySelector('head');
+            
+            // Create a temporary container
+            const temp = document.createElement('div');
+            temp.innerHTML = data;
+            
+            // Get all child nodes from the fetched content
+            const nodes = temp.childNodes;
+            
+            // Find where to insert the elements (before the script tag that loads includes.js)
+            const includesScript = script;
+            
+            // Insert all nodes before the includes.js script
+            for (let i = 0; i < nodes.length; i++) {
+                if (nodes[i].nodeType === 1) { // Only insert Element nodes
+                    head.insertBefore(nodes[i].cloneNode(true), includesScript);
                 }
-                
-                // Add a marker to indicate head-includes have been loaded
-                const marker = document.createElement('meta');
-                marker.setAttribute('name', 'head-includes-loaded');
-                marker.setAttribute('content', 'true');
-                head.appendChild(marker);
-            })
-            .catch(error => {
-                console.error('Error loading head includes:', error);
-            });
-    }
+            }
+        })
+        .catch(error => {
+            console.error('Error loading head includes:', error);
+        });
 
     // Load header
     fetch(basePath + 'header.html')
