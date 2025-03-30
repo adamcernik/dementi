@@ -68,6 +68,7 @@
         .section-image {
             height: 200px;
             overflow: hidden;
+            position: relative;
         }
         
         .section-image img {
@@ -89,7 +90,6 @@
         }
         
         .section-content h2 {
-            color: var(--deep-forest);
             margin-bottom: 0.8rem;
             font-size: 1.5rem;
         }
@@ -103,21 +103,124 @@
             align-self: flex-start;
             display: inline-block;
             padding: 0.8rem 1.5rem;
-            background-color: var(--deep-forest);
-            color: white;
             border-radius: 50px;
             font-weight: 600;
             text-decoration: none;
             transition: background-color 0.3s ease;
         }
         
-        .cta-button:hover {
+        /* Epic section styling */
+        .epic-card .section-content h2 {
+            color: var(--racing-pink);
+        }
+        
+        .epic-card .cta-button {
             background-color: var(--racing-pink);
+            color: white;
+        }
+        
+        .epic-card .cta-button:hover {
+            background-color: var(--blossom);
+        }
+        
+        /* Plan section styling */
+        .plan-card .section-content h2 {
+            color: var(--deep-forest);
+        }
+        
+        .plan-card .cta-button {
+            background-color: var(--deep-forest);
+            color: white;
+        }
+        
+        .plan-card .cta-button:hover {
+            background-color: #145D40;
+        }
+        
+        /* Riders section styling */
+        .riders-card .section-content h2 {
+            color: var(--blossom);
+        }
+        
+        .riders-card .cta-button {
+            background-color: var(--blossom);
+            color: var(--deep-forest);
+        }
+        
+        .riders-card .cta-button:hover {
+            background-color: var(--racing-pink);
+            color: white;
+        }
+        
+        /* Wisdom section styling */
+        .wisdom-card .section-content h2 {
+            color: var(--mint-breeze);
+        }
+        
+        .wisdom-card .cta-button {
+            background-color: var(--mint-breeze);
+            color: var(--deep-forest);
+        }
+        
+        .wisdom-card .cta-button:hover {
+            background-color: var(--seafoam);
+        }
+        
+        .rider-collage {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            height: 100%;
+            width: 100%;
+        }
+        
+        .rider-thumbnail {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .section-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            z-index: 2;
+        }
+        
+        .epic-badge {
+            background-color: var(--racing-pink);
+            color: white;
+        }
+        
+        .plan-badge {
+            background-color: var(--deep-forest);
+            color: white;
+        }
+        
+        .riders-badge {
+            background-color: var(--blossom);
+            color: var(--deep-forest);
+        }
+        
+        .wisdom-badge {
+            background-color: var(--mint-breeze);
+            color: var(--deep-forest);
         }
         
         @media (max-width: 768px) {
             .hero-content h1 {
                 font-size: 2.5rem;
+            }
+            
+            .rider-collage {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(4, 1fr);
             }
         }
     </style>
@@ -138,47 +241,60 @@
         <section id="explore" class="sections-overview">
             <div class="container">
                 <div class="sections-grid">
-                    <a href="/riders/" class="section-card">
+                    <a href="epics/stelvio.html" class="section-card epic-card">
                         <div class="section-image">
-                            <img src="images/dementi/rider6.png" alt="Riders">
+                            <span class="section-badge epic-badge">Epic</span>
+                            <img src="images/epics/01-stelvio/IMG_6142 Large.jpeg" alt="Stelvio Pass">
+                        </div>
+                        <div class="section-content">
+                            <h2>The Great Great Stelvio</h2>
+                            <p>Follow our 7-day, 888 km adventure through the Alps, conquering the legendary Stelvio Pass with its 48 hairpin turns and breathtaking views.</p>
+                            <span class="cta-button">View Epic</span>
+                        </div>
+                    </a>
+                    
+                    <a href="plans/slovenia.html" class="section-card plan-card">
+                        <div class="section-image">
+                            <span class="section-badge plan-badge">Upcoming</span>
+                            <img src="images/epics/01-stelvio/IMG_6086 Large.jpeg" alt="Slovenia 2025">
+                        </div>
+                        <div class="section-content">
+                            <h2>Slovenia 2025</h2>
+                            <p>Join our upcoming 6-day adventure through Slovenia's diverse landscapes, Alpine lakes, charming cities, and coinciding with a stage of the 2025 Giro d'Italia.</p>
+                            <span class="cta-button">See Plan</span>
+                        </div>
+                    </a>
+                    
+                    <a href="riders/" class="section-card riders-card">
+                        <div class="section-image">
+                            <span class="section-badge riders-badge">Team</span>
+                            <div class="rider-collage">
+                                <img src="images/dementi/rider5.png" alt="Rider" class="rider-thumbnail">
+                                <img src="images/dementi/rider6.png" alt="Rider" class="rider-thumbnail">
+                                <img src="images/dementi/rider.1.png" alt="Rider" class="rider-thumbnail">
+                                <img src="images/dementi/rider8.png" alt="Rider" class="rider-thumbnail">
+                                <img src="images/dementi/rider7.png" alt="Rider" class="rider-thumbnail">
+                                <img src="images/dementi/rider3.png" alt="Rider" class="rider-thumbnail">
+                                <img src="images/dementi/rider4.png" alt="Rider" class="rider-thumbnail">
+                                <img src="images/dementi/rider2.png" alt="Rider" class="rider-thumbnail">
+                            </div>
                         </div>
                         <div class="section-content">
                             <h2>Our Riders</h2>
-                            <p>Meet the passionate cyclists who make up Dementi, from weekend warriors to alpine adventurers, united by a love for cycling challenges.</p>
+                            <p>Meet the passionate cycling enthusiasts behind Dementi, from weekend warriors to alpine adventurers, united by the drive to explore on two wheels.</p>
                             <span class="cta-button">Meet the Team</span>
                         </div>
                     </a>
                     
-                    <a href="/epics/" class="section-card">
+                    <a href="wisdom/" class="section-card wisdom-card">
                         <div class="section-image">
-                            <img src="images/epics/01-stelvio/IMG_6086 Large.jpeg" alt="Epic Journeys">
+                            <span class="section-badge wisdom-badge">Wisdom</span>
+                            <img src="images/epics/01-stelvio/IMG_6091 Large.jpeg" alt="Packing Guide">
                         </div>
                         <div class="section-content">
-                            <h2>Epic Journeys</h2>
-                            <p>Explore our multi-day cycling adventures across Europe's most stunning and challenging landscapes, from the Alps to the Pyrenees.</p>
-                            <span class="cta-button">View Epics</span>
-                        </div>
-                    </a>
-                    
-                    <a href="/plans/" class="section-card">
-                        <div class="section-image">
-                            <img src="images/epics/01-stelvio/IMG_6153 Large.jpeg" alt="Future Plans">
-                        </div>
-                        <div class="section-content">
-                            <h2>Future Plans</h2>
-                            <p>Discover where Dementi is heading next, from confirmed expeditions to dream routes on our cycling horizon.</p>
-                            <span class="cta-button">See Plans</span>
-                        </div>
-                    </a>
-                    
-                    <a href="/wisdom/" class="section-card">
-                        <div class="section-image">
-                            <img src="images/epics/01-stelvio/IMG_6179 Large.jpeg" alt="Cycling Wisdom">
-                        </div>
-                        <div class="section-content">
-                            <h2>Cycling Wisdom</h2>
-                            <p>Learn from our experiences with insights, tips, and stories from our cycling adventures to improve your own cycling journey.</p>
-                            <span class="cta-button">Get Inspired</span>
+                            <h2>The Ultimate Bike Packing Guide</h2>
+                            <p>Learn our refined packing strategy to balance weight and preparedness for multi-day alpine adventures with this comprehensive guide of what to bring and what to leave behind.</p>
+                            <span class="cta-button">Get Wisdom</span>
                         </div>
                     </a>
                 </div>
