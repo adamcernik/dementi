@@ -34,25 +34,6 @@
     margin-right: auto;
 }
 
-/* Hero CTA button styling */
-.hero-content .cta-button {
-    background-color: var(--racing-pink);
-    color: white;
-    font-size: 1.1rem;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    text-decoration: none;
-    display: inline-block;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.hero-content .cta-button:hover {
-    background-color: var(--blossom);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
 .sections-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

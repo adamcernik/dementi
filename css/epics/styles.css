@@ -96,6 +96,7 @@
     min-height: 400px;
     position: relative;
     overflow: hidden;
+    background-color: #f0f0f0; /* Light placeholder color */
 }
 
 .epic-hero img {
@@ -279,5 +280,56 @@
     .gallery-item:first-child {
         grid-column: 1;
         grid-row: 1;
+    }
+}
+
+/* Hero riders profile images */
+.epic-hero-riders {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    z-index: 5;
+}
+
+.hero-rider-profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid white;
+    overflow: hidden;
+    margin-left: 8px;
+}
+
+.hero-rider-profile:first-child {
+    margin-left: 0;
+}
+
+.hero-rider-profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .epic-hero-content {
+        padding-bottom: 5rem; /* Create space for the rider profiles */
+    }
+    
+    .epic-hero-riders {
+        position: absolute;
+        bottom: 1rem;
+        right: auto;
+        left: 2rem;
+        width: calc(100% - 4rem);
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .hero-rider-profile {
+        margin-left: 0;
     }
 } 
