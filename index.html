@@ -2,109 +2,202 @@
 <html lang="en">
 <head>
     <title>Dementi - Cycling Adventure Team</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8C181GLNQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-J8C181GLNQ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <script src="js/includes.js"></script>
-    <!-- The rest of the head content will be loaded dynamically -->
+    <style>
+        .home-hero {
+            height: 90vh;
+            min-height: 600px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/epics/01-stelvio/IMG_6142 Large.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-content {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .sections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 0;
+        }
+        
+        .section-card {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: var(--charcoal);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .section-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .section-card:hover .section-image img {
+            transform: scale(1.05);
+        }
+        
+        .section-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .section-content h2 {
+            color: var(--deep-forest);
+            margin-bottom: 0.8rem;
+            font-size: 1.5rem;
+        }
+        
+        .section-content p {
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+        
+        .cta-button {
+            align-self: flex-start;
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--deep-forest);
+            color: white;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: var(--racing-pink);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header will be inserted here -->
     <div id="header-placeholder"></div>
     
     <main>
-        <section class="riders-hero">
-            <div class="container">
-                <h1>Meet Our Riders</h1>
-                <p>The passionate cycling enthusiasts behind Dementi. From weekend warriors to alpine adventurers, our diverse crew shares one common trait - an unstoppable drive to push boundaries and explore the world on two wheels.</p>
+        <section class="home-hero">
+            <div class="hero-content">
+                <h1>Dementi Cycling Team</h1>
+                <p>A crew of passionate cyclists from Prague pushing boundaries on two wheels through epic adventures around Europe and beyond. Join us as we conquer mountains, explore new roads, and share unforgettable cycling experiences.</p>
+                <a href="#explore" class="cta-button">Explore Our World</a>
             </div>
         </section>
         
-        <section class="riders">
+        <section id="explore" class="sections-overview">
             <div class="container">
-                <h2>Our Riders</h2>
-                <div class="rider-grid">
-
-                    <div class="rider-card">
-                        <div class="rider-img">
-                            <img src="images/dementi/rider5.png" alt="Rider 5">
+                <div class="sections-grid">
+                    <a href="/riders/" class="section-card">
+                        <div class="section-image">
+                            <img src="images/dementi/rider6.png" alt="Riders">
                         </div>
-                        <div class="rider-info">
-                            <h3>Kája Kristek</h3>
-                            <p class="rider-specialty">Struggling Miracle</p>
-                            <p class="rider-desc">Precision and power define this record-breaking time trialist.</p>
+                        <div class="section-content">
+                            <h2>Our Riders</h2>
+                            <p>Meet the passionate cyclists who make up Dementi, from weekend warriors to alpine adventurers, united by a love for cycling challenges.</p>
+                            <span class="cta-button">Meet the Team</span>
                         </div>
-                    </div>
+                    </a>
                     
-                    <div class="rider-card">
-                        <div class="rider-img">
-                            <img src="images/dementi/rider6.png" alt="Rider 6">
+                    <a href="/epics/" class="section-card">
+                        <div class="section-image">
+                            <img src="images/epics/01-stelvio/IMG_6086 Large.jpeg" alt="Epic Journeys">
                         </div>
-                        <div class="rider-info">
-                            <h3>Adam Černík</h3>
-                            <p class="rider-specialty">Leading Domestique</p>
-                            <p class="rider-desc">Fearless on descents with unmatched bike handling skills.</p>
+                        <div class="section-content">
+                            <h2>Epic Journeys</h2>
+                            <p>Explore our multi-day cycling adventures across Europe's most stunning and challenging landscapes, from the Alps to the Pyrenees.</p>
+                            <span class="cta-button">View Epics</span>
                         </div>
-                    </div>
-
-                    <div class="rider-card">
-                        <div class="rider-img">
-                            <img src="images/dementi/rider.1.png" alt="Rider 1">
-                        </div>
-                        <div class="rider-info">
-                            <h3>Jirka Srkal</h3>
-                            <p class="rider-specialty">Modřany Express</p>
-                            <p class="rider-desc">Conquering peaks and pushing limits since 2015.</p>
-                        </div>
-                    </div>
-                    <div class="rider-card">
-                        <div class="rider-img">
-                            <img src="images/dementi/rider8.png" alt="Rider 8">
-                        </div>
-                        <div class="rider-info">
-                            <h3>Ondra Píhrt</h3>
-                            <p class="rider-specialty">Specialized Expert</p>
-                            <p class="rider-desc">Consistent performer excelling across all race formats and conditions.</p>
-                        </div>
-                    </div>
-                    <div class="rider-card">
-                        <div class="rider-img">
-                            <img src="images/dementi/rider7.png" alt="Rider 7">
-                        </div>
-                        <div class="rider-info">
-                            <h3>David Suda</h3>
-                            <p class="rider-specialty">Doggystyle Master</p>
-                            <p class="rider-desc">Lightweight climbing specialist who thrives on the steepest gradients.</p>
-                        </div>
-                    </div>
-                    <div class="rider-card">
-                        <div class="rider-img">
-                            <img src="images/dementi/rider3.png" alt="Rider 3">
-                        </div>
-                        <div class="rider-info">
-                            <h3>Honza Plajner</h3>
-                            <p class="rider-specialty">Bianchi Fascist</p>
-                            <p class="rider-desc">Specializes in long-distance events and multi-day races.</p>
-                        </div>
-                    </div>
+                    </a>
                     
-                    <div class="rider-card">
-                        <div class="rider-img">
-                            <img src="images/dementi/rider4.png" alt="Rider 4">
+                    <a href="/plans/" class="section-card">
+                        <div class="section-image">
+                            <img src="images/epics/01-stelvio/IMG_6153 Large.jpeg" alt="Future Plans">
                         </div>
-                        <div class="rider-info">
-                            <h3>Jiřina Kinkor</h3>
-                            <p class="rider-specialty">Endurance Motherfucker</p>
-                            <p class="rider-desc">Versatile rider excelling in varied conditions and terrains.</p>
+                        <div class="section-content">
+                            <h2>Future Plans</h2>
+                            <p>Discover where Dementi is heading next, from confirmed expeditions to dream routes on our cycling horizon.</p>
+                            <span class="cta-button">See Plans</span>
                         </div>
-                    </div>
-                    <div class="rider-card">
-                        <div class="rider-img">
-                            <img src="images/dementi/rider2.png" alt="Rider 2">
+                    </a>
+                    
+                    <a href="/wisdom/" class="section-card">
+                        <div class="section-image">
+                            <img src="images/epics/01-stelvio/IMG_6179 Large.jpeg" alt="Cycling Wisdom">
                         </div>
-                        <div class="rider-info">
-                            <h3>George Bridges</h3>
-                            <p class="rider-specialty">Tunnel Horrorist</p>
-                            <p class="rider-desc">Lightning fast with unmatched acceleration on flats.</p>
+                        <div class="section-content">
+                            <h2>Cycling Wisdom</h2>
+                            <p>Learn from our experiences with insights, tips, and stories from our cycling adventures to improve your own cycling journey.</p>
+                            <span class="cta-button">Get Inspired</span>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>

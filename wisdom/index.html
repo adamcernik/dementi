@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cycling Wisdom - Dementi</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8C181GLNQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-J8C181GLNQ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script src="../js/includes.js"></script>
+    <style>
+        .wisdom-hero {
+            background-color: var(--mint-breeze);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .wisdom-hero h1 {
+            color: var(--deep-forest);
+            margin-bottom: 1rem;
+        }
+        
+        .wisdom-hero p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            color: var(--deep-forest);
+        }
+        
+        .wisdom-section {
+            padding: 4rem 0;
+        }
+        
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+        
+        .article-card {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            transition: box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .article-card:hover {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .article-image {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .article-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .article-category {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background-color: var(--racing-pink);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .article-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .article-meta {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+            font-size: 0.9rem;
+            color: var(--charcoal);
+            opacity: 0.7;
+        }
+        
+        .article-meta .author {
+            margin-right: 1.5rem;
+        }
+        
+        .article-content h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            color: var(--deep-forest);
+        }
+        
+        .article-excerpt {
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+        
+        .article-link {
+            align-self: flex-start;
+            color: var(--racing-pink);
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .article-link i {
+            margin-left: 0.5rem;
+            transition: transform 0.2s ease;
+        }
+        
+        .article-link:hover i {
+            transform: translateX(3px);
+        }
+        
+        .categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 3rem 0;
+        }
+        
+        .category-filter {
+            background-color: var(--cloud);
+            color: var(--charcoal);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        
+        .category-filter:hover,
+        .category-filter.active {
+            background-color: var(--racing-pink);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header will be inserted here -->
+    <div id="header-placeholder"></div>
+    
+    <main>
+        <section class="wisdom-hero">
+            <div class="container">
+                <h1>Cycling Wisdom</h1>
+                <p>Insights, tips, and stories from our cycling adventures. Learn from our experiences and mistakes to improve your own cycling journey.</p>
+            </div>
+        </section>
+        
+        <section class="wisdom-section">
+            <div class="container">
+                <div class="categories">
+                    <a href="#" class="category-filter active">All</a>
+                    <a href="#" class="category-filter">Gear Reviews</a>
+                    <a href="#" class="category-filter">Bike Packing</a>
+                    <a href="#" class="category-filter">Training</a>
+                    <a href="#" class="category-filter">Nutrition</a>
+                    <a href="#" class="category-filter">Route Planning</a>
+                </div>
+                
+                <div class="articles-grid">
+                    <div class="article-card">
+                        <div class="article-image">
+                            <img src="../images/epics/01-stelvio/IMG_6091 Large.jpeg" alt="Bike Packing Essentials">
+                            <span class="article-category">Bike Packing</span>
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="author"><i class="fas fa-user"></i> Adam Černík</span>
+                                <span class="date"><i class="far fa-calendar"></i> July 15, 2023</span>
+                            </div>
+                            <h3>The Ultimate Bike Packing Checklist for Multi-Day Alpine Adventures</h3>
+                            <p class="article-excerpt">After numerous alpine adventures, we've refined our packing strategy to balance weight and preparedness. Here's our comprehensive guide to what you absolutely need and what you can leave behind.</p>
+                            <a href="#" class="article-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="article-card">
+                        <div class="article-image">
+                            <img src="../images/epics/01-stelvio/IMG_6153 Large.jpeg" alt="Alpine Climbing">
+                            <span class="article-category">Training</span>
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="author"><i class="fas fa-user"></i> Kája Kristek</span>
+                                <span class="date"><i class="far fa-calendar"></i> June 28, 2023</span>
+                            </div>
+                            <h3>How to Train for Alpine Climbs When You Live in a Flat City</h3>
+                            <p class="article-excerpt">Living in Prague doesn't offer many opportunities for mountain training. Learn how our team prepared for the massive alpine climbs with creative flat-land training techniques.</p>
+                            <a href="#" class="article-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="article-card">
+                        <div class="article-image">
+                            <img src="../images/epics/01-stelvio/IMG_6179 Large.jpeg" alt="Cycling Nutrition">
+                            <span class="article-category">Nutrition</span>
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="author"><i class="fas fa-user"></i> Jirka Srkal</span>
+                                <span class="date"><i class="far fa-calendar"></i> August 5, 2023</span>
+                            </div>
+                            <h3>Alpine Fueling: What to Eat During Long Mountain Rides</h3>
+                            <p class="article-excerpt">Proper nutrition is crucial for multi-day alpine adventures. Discover our tested nutrition strategy that kept us energized throughout the demanding Stelvio epic.</p>
+                            <a href="#" class="article-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="article-card">
+                        <div class="article-image">
+                            <img src="../images/epics/01-stelvio/IMG_6086 Large.jpeg" alt="Route Planning">
+                            <span class="article-category">Route Planning</span>
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="author"><i class="fas fa-user"></i> Honza Plajner</span>
+                                <span class="date"><i class="far fa-calendar"></i> May 12, 2023</span>
+                            </div>
+                            <h3>Creating the Perfect Alpine Route: Tools and Techniques</h3>
+                            <p class="article-excerpt">Planning a multi-day alpine route requires careful consideration of distance, elevation, logistics, and accommodations. Learn about the tools and strategies we used to plan our Stelvio adventure.</p>
+                            <a href="#" class="article-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="article-card">
+                        <div class="article-image">
+                            <img src="../images/epics/01-stelvio/IMG_6247 Large.jpeg" alt="Gear Reviews">
+                            <span class="article-category">Gear Reviews</span>
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="author"><i class="fas fa-user"></i> David Suda</span>
+                                <span class="date"><i class="far fa-calendar"></i> July 29, 2023</span>
+                            </div>
+                            <h3>Gear that Survived the Alps: Our Top Equipment Picks</h3>
+                            <p class="article-excerpt">After putting our gear through the ultimate alpine test, we review the standout items that performed exceptionally well during our Stelvio journey.</p>
+                            <a href="#" class="article-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="article-card">
+                        <div class="article-image">
+                            <img src="../images/epics/01-stelvio/IMG_6127 Large.jpeg" alt="Mental Preparedness">
+                            <span class="article-category">Training</span>
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="author"><i class="fas fa-user"></i> Ondra Píhrt</span>
+                                <span class="date"><i class="far fa-calendar"></i> August 18, 2023</span>
+                            </div>
+                            <h3>Mental Toughness: Preparing for Long Alpine Climbs</h3>
+                            <p class="article-excerpt">The physical challenge of alpine cycling is only half the battle. Discover the mental strategies that helped us conquer the long, grueling climbs of the Stelvio Pass and beyond.</p>
+                            <a href="#" class="article-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer will be inserted here -->
+    <div id="footer-placeholder"></div>
+</body>
+</html> 
