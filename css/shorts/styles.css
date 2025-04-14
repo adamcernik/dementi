@@ -1,0 +1,246 @@
+/* Shorts Page Styles */
+
+/* Shorts Hero Section */
+.shorts-hero {
+    background-color: white;
+    color: var(--charcoal);
+    padding: 4rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.shorts-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.shorts-hero h1 {
+    color: var(--charcoal);
+    margin-bottom: 1rem;
+}
+
+.shorts-hero p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+.shorts-section {
+    padding: 4rem 0;
+}
+
+.shorts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.short-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.short-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.short-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.short-details {
+    padding: 2rem;
+}
+
+.short-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: var(--charcoal);
+    opacity: 0.8;
+}
+
+.short-meta i {
+    margin-right: 0.5rem;
+}
+
+.short-details h3 {
+    margin-bottom: 1rem;
+    color: var(--fresh-blue);
+    font-size: 1.8rem;
+}
+
+.short-desc {
+    margin-bottom: 1.5rem;
+}
+
+/* Detail page styles for individual short rides */
+.short-hero {
+    height: 50vh;
+    min-height: 350px;
+    position: relative;
+    overflow: hidden;
+    background-color: #f0f0f0; /* Light placeholder color */
+}
+
+.short-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.short-hero-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+}
+
+.short-hero-content h1 {
+    color: white;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+}
+
+.short-hero-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.short-details-section {
+    padding: 4rem 0;
+}
+
+.short-details-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.short-info-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+}
+
+.short-info-card h2 {
+    color: var(--fresh-blue);
+    margin-bottom: 1.5rem;
+}
+
+.short-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.stat-item {
+    padding: 1.5rem;
+    background-color: var(--cloud);
+    border-radius: 8px;
+}
+
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--fresh-blue);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.short-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.sidebar-highlights {
+    margin-top: 0;
+}
+
+.sidebar-highlights li {
+    margin-bottom: 0.75rem;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+    .short-card {
+        flex-direction: row;
+    }
+    
+    .short-image {
+        width: 40%;
+        height: auto;
+    }
+    
+    .short-details {
+        width: 60%;
+    }
+}
+
+@media (max-width: 767px) {
+    .short-details-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .short-gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .short-hero-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Button style override for shorts section */
+.shorts .btn.primary {
+    background-color: var(--fresh-blue);
+}
+
+.shorts .btn.primary:hover {
+    background-color: var(--deep-forest);
+} 

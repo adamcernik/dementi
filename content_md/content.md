@@ -1,0 +1,13 @@
+**Praha - Ještěd**
+
+Švih z Prahy na Ještěd. To chceš. Český ikonický vrchol dosáhnete několikahodinovou jízdou z Prahy.120 kilometrů, 1300 metrů převýšení jsou parametry příjemného švihu s libovým finišem. Naše trasa je: Praha-Brandýs-Benátky-Boleslav-Mnichovo Hradiště-Český Dub. Ještěd na dohled a začínáme stoupat. Na zbylých 30 kilemtrech nastoupáte 1000 metrů a čím blíže jste k cíli, tím krásnější je kopec. Od Tetřevího sedla už jde do strmého. Ještěd je české cyklistické must vyšlapat. Nejeli jste ještě? Musíte. Jinak jste DEMENTI!
+
+Z Liberce začínáme 300 metrovým stoupáním. Odměnou nám je nádherný jizerský výhled a parádní sjezd. Protáhnout, zalepit duši, projet kolem Bezdězu. A vjíždíme do kokořínského dolu. Je to sice drobná zajížďka směrem Prahy, ale čeká  nás krásná trasa. Malé silnice, kouzelné chaloupky, pískovcové skály, hrad Kokořín, zarůstající rybníky. Sotva se dokocháte, vystoupáte k Mělníku. Doplnit cukry a notoricky známými cestami už se vracíme domů.Jsme dementi.
+
+**Praha->Vídeň**
+
+Z Prahy do Vídně to je 340 km a 3800 výškových metrů. Zcela dementní nápad je tento švih absolvovat v říjnu s brzkým setměním a ranními mrazy. V údolích jsou -2 stupně. Navíc zcela dementně vyjíždíme pozdě. Cesta nás vede skrz Benešov, Vlašim a v Humpolci dáváme skvělé dezerty v Sedmičce. A to jsme teprve lehce za polovinou cesty. Světlo se s námi bohužel loučí. Do cíle prvního dne dorážíme po 180 km a Vysočina nám nandala 2600 nastoupaných metrů. Druhý den vypadá snáze. 160 km a 1200 metrů. Úvod cesty krásně klesáme až na jižní Moravu. Nastupují rakouské kopečky, před nimiž mě zradilo koleno. V barefootech dojíždím do Vídně. Z kdovíjakého důvodu je naším cílem Schweizerhaus v Prateru. Pivo s divnopěnou, schnitzel a noční autobus, který nás nad ránem vrací zpět do Prahy. Jsme DEMENTI.
+
+**Praha - Krušné hory - Praha**
+
+Krušné hory z Prahy a zpět vám hodí 320 km. Kralupy jsou prvním větším městem, které projíždíme. Celá severní část od Prahy je naším oblíbeným cyklorajónem. Příjemný profil, malé, spravené a poměrně klidné silnice. Dále projíždíme Žatec, příští zastávka Kadaň, kde na chvíli zastavujeme, řádně doplňíme energii a kofein. a pak to přijde.  Absolutní lahůdka. 500 nastoupaných metrů na pouhých 7 kilometrech do vesničky Měděnec. Zde si užíváme krásné výhledy a také nocujeme. Druhý den nás čeká nádherná prohlídka Krušných hor. 60 kilometrů panoramat, dolů, nahoru. Krušné hory jsou ale totální pecka, nejsou takovou turistickou atrakcí jako Jizerky a Krkonše, je tu také o poznání klidněji. Horskou etapu opouštíme v Litvínově a odsud se vracíme s 3700 nastoupanými metry (za oba dny) zpět do Prahy. Jsme DEMENTI.

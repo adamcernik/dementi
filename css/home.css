@@ -1,7 +1,7 @@
 .home-hero {
     height: 90vh;
     min-height: 600px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/epics/01-stelvio/IMG_6142 Large.jpeg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/epics/01-stelvio/IMG_6142_Large.jpeg');
     background-size: cover;
     background-position: center;
     color: white;
