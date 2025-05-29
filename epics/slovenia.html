@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Slovenia Epic Journey - Dementi</title>
+    <script src="../js/includes.js"></script>
+    <link rel="stylesheet" href="../css/epics/styles.css">
+    <style>
+        /* Fullscreen layout styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        
+        main {
+            width: 100%;
+            max-width: 100%;
+        }
+        
+        .fullwidth-section {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        
+        /* Hero image gallery */
+        .image-gallery {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE and Edge */
+            height: 60vh;
+            min-height: 450px;
+            width: 100%;
+        }
+        
+        .image-gallery::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+        }
+        
+        .gallery-tile {
+            flex: 0 0 auto;
+            width: 80%;
+            min-width: 300px;
+            height: 100%;
+            scroll-snap-align: center;
+            padding: 0 5px;
+        }
+        
+        .gallery-tile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        
+        /* Content section */
+        .content-section {
+            padding: 3rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .epic-title {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+        
+        .epic-subtitle {
+            font-size: 1.2rem;
+            color: #555;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .epic-meta-bar {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2rem 0;
+            padding: 1rem;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+        }
+        
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .meta-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--fresh-blue);
+        }
+        
+        .meta-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .day-section {
+            margin: 4rem 0;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .day-section:last-child {
+            border-bottom: none;
+        }
+        
+        .day-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--fresh-blue);
+        }
+        
+        .day-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        
+        .day-details span {
+            display: flex;
+            align-items: center;
+        }
+        
+        .day-details i {
+            margin-right: 0.5rem;
+        }
+        
+        .highlights-section {
+            background-color: #f9f9f9;
+            padding: 3rem 5%;
+            margin: 2rem 0;
+        }
+        
+        .highlights-title {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .highlights-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .highlight-item {
+            flex: 0 0 calc(50% - 1rem);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-tile {
+                width: 100%;
+            }
+            
+            .highlight-item {
+                flex: 0 0 100%;
+            }
+            
+            .epic-meta-bar {
+                gap: 1rem;
+            }
+        }
+        
+        /* Modal styling */
+        .gallery-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow: hidden;
+        }
+        
+        .modal-content {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+        
+        .modal-image {
+            max-width: 85%;
+            max-height: 85%;
+            object-fit: contain;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1010;
+        }
+        
+        .modal-nav {
+            position: absolute;
+            color: white;
+            font-size: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            user-select: none;
+            z-index: 1010;
+        }
+        
+        .prev {
+            left: 30px;
+        }
+        
+        .next {
+            right: 30px;
+        }
+    </style>
+    <!-- The rest of the head content will be loaded dynamically -->
+</head>
+<body>
+    <!-- Header will be inserted here -->
+    <div id="header-placeholder"></div>
+    
+    <main>
+        <!-- Fullwidth image gallery at the top -->
+        <section class="fullwidth-section">
+            <div class="image-gallery">
+                <div class="gallery-tile" data-index="0">
+                    <img src="../images/epics/03-slovenia/slovenia1.jpg" alt="Slovenia Cycling Adventure" loading="lazy">
+                </div>
+                <div class="gallery-tile" data-index="1">
+                    <img src="../images/epics/03-slovenia/slovenia2.jpg" alt="Cycling from Graz to Žalec" loading="lazy">
+                </div>
+                <div class="gallery-tile" data-index="2">
+                    <img src="../images/epics/03-slovenia/slovenia3.jpg" alt="Cycling from Žalec to Gorizia" loading="lazy">
+                </div>
+                <div class="gallery-tile" data-index="3">
+                    <img src="../images/epics/03-slovenia/slovenia4.jpg" alt="Cycling from Gorizia to Bohinj" loading="lazy">
+                </div>
+                <div class="gallery-tile" data-index="4">
+                    <img src="../images/epics/03-slovenia/slovenia5.jpeg" alt="Cycling from Bohinj to Slovenj Gradec" loading="lazy">
+                </div>
+                <div class="gallery-tile" data-index="5">
+                    <img src="../images/epics/03-slovenia/slovenia6.jpeg" alt="Cycling from Slovenj Gradec to Maribor" loading="lazy">
+                </div>
+                <div class="gallery-tile" data-index="6">
+                    <img src="../images/epics/03-slovenia/slovenia7.jpg" alt="Slovenia Landscape View" loading="lazy">
+                </div>
+                <div class="gallery-tile" data-index="7">
+                    <img src="../images/epics/03-slovenia/slovenia8.jpg" alt="Cycling in Slovenia" loading="lazy">
+                </div>
+                <div class="gallery-tile" data-index="8">
+                    <img src="../images/epics/03-slovenia/slovenia9.jpeg" alt="Slovenia Mountains" loading="lazy">
+                </div>
+                <div class="gallery-tile" data-index="9">
+                    <img src="../images/epics/03-slovenia/slovenia10.jpeg" alt="Slovenia Landscape" loading="lazy">
+                </div>
+                <div class="gallery-tile" data-index="10">
+                    <img src="../images/epics/03-slovenia/slovenia11.jpg" alt="Slovenia Scenic Route" loading="lazy">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Content section -->
+        <section class="content-section">
+            <h1 class="epic-title">6 Days Cycling Through Slovenia</h1>
+            <p class="epic-subtitle">Prague to Slovenia and Back: A Journey Through Alpine Landscapes, Medieval Towns, and Wine Regions</p>
+            
+            <div class="epic-meta-bar">
+                <div class="meta-item">
+                    <div class="meta-value">850km</div>
+                    <div class="meta-label">Total Distance</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-value">8,000m</div>
+                    <div class="meta-label">Total Elevation</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-value">6 Days</div>
+                    <div class="meta-label">Duration</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-value">3</div>
+                    <div class="meta-label">Countries</div>
+                </div>
+            </div>
+            
+            <p>Our cycling trip through Slovenia - from Prague by train to Graz, then six days exploring Slovenia's diverse landscapes by bike.</p>
+            
+            <p>We took the morning train from Prague to Graz, arriving before noon, ready for six days of cycling through Slovenia. The plan was simple: explore as much of this small country as possible, then catch the late afternoon train back to Prague.</p>
+            
+            <div class="day-section">
+                <h2 class="day-title">Day 1: Graz to Žalec</h2>
+                <div class="day-details">
+                    <span><i class="fas fa-map-marker-alt"></i> Graz to Žalec</span>
+                    <span><i class="fas fa-route"></i> 159.8 km</span>
+                    <span><i class="fas fa-arrow-up"></i> 1,337 m gain</span>
+                </div>
+                <p>Started cycling south from Graz train station around noon. Crossed the Austrian-Slovenian border on quiet country roads - just a simple sign marking the change.</p>
+                <p>The landscape shifted from Austrian rolling hills to Slovenian countryside with traditional red-tiled roof villages. Roads were surprisingly quiet and well-maintained.</p>
+                <p>Žalec sits in Slovenia's hop-growing region - we could smell the hops in the air. The town has the world's first beer fountain, which seemed like the right way to end day one after 160km.</p>
+            </div>
+
+            <div class="day-section">
+                <h2 class="day-title">Day 2: Žalec to Gorizia</h2>
+                <div class="day-details">
+                    <span><i class="fas fa-map-marker-alt"></i> Žalec to Gorizia</span>
+                    <span><i class="fas fa-route"></i> 194.3 km</span>
+                    <span><i class="fas fa-arrow-up"></i> 1,427 m gain</span>
+                </div>
+                <p>Our longest day - nearly 200km crossing Slovenia west to the Italian border. Started early through the Savinja Valley region.</p>
+                <p>The route took us through traditional Slovenian villages, each with church spires and scattered farmhouses. Roads stayed quiet throughout. By afternoon, the landscape changed as we approached the Italian border - more vineyards, Mediterranean influences in the architecture.</p>
+                <p>Gorizia is split between Italy (Gorizia) and Slovenia (Nova Gorica). After 194km, Italian food was exactly what we needed.</p>
+            </div>
+
+            <div class="day-section">
+                <h2 class="day-title">Day 3: Gorizia to Bohinj</h2>
+                <div class="day-details">
+                    <span><i class="fas fa-map-marker-alt"></i> Gorizia to Bohinj</span>
+                    <span><i class="fas fa-route"></i> 159.1 km</span>
+                    <span><i class="fas fa-arrow-up"></i> 1,898 m gain</span>
+                </div>
+                <p>The climbing day - 1,898m elevation gain heading into the Julian Alps. Left Italy early morning, immediately started climbing into proper mountain territory.</p>
+                <p>Followed roads alongside the Soča River - the water has this incredible emerald green color that's completely unique. The Julian Alps, dominated by Mount Triglav (2,864m - Slovenia's highest peak), provided the backdrop.</p>
+                <p>Lake Bohinj sits in Triglav National Park, Slovenia's only national park. This glacial lake is much wilder than touristy Lake Bled - surrounded by peaks and pristine forest.</p>
+            </div>
+
+            <div class="day-section">
+                <h2 class="day-title">Day 4: Bohinj to Slovenj Gradec</h2>
+                <div class="day-details">
+                    <span><i class="fas fa-map-marker-alt"></i> Bohinj to Slovenj Gradec</span>
+                </div>
+                <p>Left the high Alps behind, descending through valleys that showcase Slovenia's biodiversity. The country packs incredible landscape variety into just 20,273 square kilometers.</p>
+                <p>Slovenj Gradec is a well-preserved medieval town with Gothic architecture. Much quieter than Slovenia's bigger cities.</p>
+            </div>
+
+            <div class="day-section">
+                <h2 class="day-title">Day 5: Slovenj Gradec to Maribor</h2>
+                <div class="day-details">
+                    <span><i class="fas fa-map-marker-alt"></i> Slovenj Gradec to Maribor</span>
+                </div>
+                <p>Rode through Slovenia's wine-growing region toward Maribor, the country's second-largest city. The terrain was gentler - rolling hills covered in vineyards.</p>
+                <p>Maribor sits on the Drava River near the Austrian border. The city is home to the world's oldest vine - over 400 years old and still producing grapes.</p>
+            </div>
+
+            <div class="day-section">
+                <h2 class="day-title">Day 6: Maribor to Graz (by train)</h2>
+                <div class="day-details">
+                    <span><i class="fas fa-map-marker-alt"></i> Maribor to Graz (by train)</span>
+                </div>
+                <p>Took the train back to Graz instead of cycling. Arrived with time to catch the afternoon train to Prague, departing before 17:00.</p>
+            </div>
+        </section>
+        
+        <section class="highlights-section">
+            <h2 class="highlights-title">The Numbers</h2>
+            <div class="highlights-grid">
+                <div class="highlight-item">
+                    <i class="fas fa-route"></i>
+                    <span><strong>Total cycling:</strong> 850km over 5 days</span>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-mountain"></i>
+                    <span><strong>Total climbing:</strong> ~8,000m</span>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-flag"></i>
+                    <span><strong>Countries visited:</strong> Slovenia, Austria, Italy</span>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-users"></i>
+                    <span><strong>Population of Slovenia:</strong> 2.1 million people</span>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-arrow-up"></i>
+                    <span><strong>Highest point:</strong> Mount Triglav at 2,864m</span>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-thumbs-up"></i>
+                    <span>Slovenia: Excellent for cycling with quiet roads and dramatic scenery</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Image Modal -->
+    <div class="gallery-modal">
+        <span class="close-modal">&times;</span>
+        <span class="modal-nav prev">&#10094;</span>
+        <span class="modal-nav next">&#10095;</span>
+        <div class="modal-content">
+            <img class="modal-image" src="" alt="Gallery image">
+        </div>
+    </div>
+    
+    <!-- Footer will be inserted here -->
+    <div id="footer-placeholder"></div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery functionality
+            const galleryTiles = document.querySelectorAll('.gallery-tile');
+            const modal = document.querySelector('.gallery-modal');
+            const modalImg = document.querySelector('.modal-image');
+            const closeBtn = document.querySelector('.close-modal');
+            const prevBtn = document.querySelector('.prev');
+            const nextBtn = document.querySelector('.next');
+            
+            let currentIndex = 0;
+            const images = Array.from(galleryTiles).map(item => {
+                return {
+                    src: item.querySelector('img').src,
+                    alt: item.querySelector('img').alt
+                };
+            });
+            
+            // Open modal with clicked image
+            galleryTiles.forEach(item => {
+                item.addEventListener('click', function() {
+                    currentIndex = parseInt(this.dataset.index);
+                    updateModalImage();
+                    modal.style.display = 'block';
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+                });
+            });
+            
+            // Close modal
+            closeBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+            
+            // Navigate through images
+            prevBtn.addEventListener('click', showPrevImage);
+            nextBtn.addEventListener('click', showNextImage);
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                if (modal.style.display === 'block') {
+                    if (e.key === 'ArrowLeft') {
+                        showPrevImage();
+                    } else if (e.key === 'ArrowRight') {
+                        showNextImage();
+                    } else if (e.key === 'Escape') {
+                        closeModal();
+                    }
+                }
+            });
+            
+            function updateModalImage() {
+                modalImg.src = images[currentIndex].src;
+                modalImg.alt = images[currentIndex].alt;
+            }
+            
+            function showPrevImage() {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                updateModalImage();
+            }
+            
+            function showNextImage() {
+                currentIndex = (currentIndex + 1) % images.length;
+                updateModalImage();
+            }
+            
+            function closeModal() {
+                modal.style.display = 'none';
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+            
+            // Auto-scroll the gallery horizontally a bit to show users it's scrollable
+            setTimeout(() => {
+                const gallery = document.querySelector('.image-gallery');
+                if (gallery.scrollWidth > gallery.clientWidth) {
+                    gallery.scrollTo({
+                        left: 150,
+                        behavior: 'smooth'
+                    });
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html> 
